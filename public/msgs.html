@@ -1,0 +1,23 @@
+<html data-ng-app="wallapp">
+  <head>
+    <title>Wall App</title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/msgs.js"></script>
+  </head>
+  <body data-ng-controller="WallApp">
+    <h1>Message Board</h1>
+    <fieldset class="row-fluid">
+      <legend>New Message</legend>
+      <input type="text" placeholder="Message Title" data-ng-model="novamsg.titulomensagem"/><br/>
+      <textarea data-ng-model="novamsg.corpomensagem"></textarea><br/>
+      <button data-ng-click="sendmsg()">Send</button>
+    </fieldset>
+    <fieldset>
+        <legend>Messages</legend>
+        <div data-ng-repeat="msg in mensagens">
+          <h2>{{msg.titulomensagem}}</h2>
+          <p>{{msg.corpomensagem}}</p>
+        </div>
+    </fieldset>
+  </body>
+</html>

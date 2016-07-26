@@ -1,0 +1,24 @@
+{
+  "name": "wallapp",
+  "version": "0.0.0",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "main": "wallapp.js",
+  "homepage": "https://github.com/paoloo/nodejs-webapp",
+  "authors": [
+    "paoloo <paolo@fisica.ufc.br>"
+  ],
+  "description": ""
+}
