@@ -10,11 +10,19 @@ A simple dockerizable nodejs webapp with knex, sqlite3 and angular, to test some
 - **body-parser** 1.13.3+
 - **sqlite3**
 
-Install everything with **npm**:
-```npm install express knex body-parser bower sqlite3``` or just ```npm install```
+Install the basics, *as root*, with your package manager:
+```
+apt-get install nodejs npm
+npm install bower -g -s
+```
 
-If you wanr, renew angular on /public by running **bower**:
-```bower install angular```
+Then, install everything with **npm**:
+
+```npm install express knex body-parser sqlite3``` or just ```npm install```
+
+get angular working on /public by running **bower**:
+
+```cd public && bower install angular```
 
 A `bower init` later help to organize the mess... Or not.
 
