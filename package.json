@@ -1,7 +1,7 @@
 {
   "name": "wallapp",
   "version": "0.0.1",
-  "description": "sample nodejs+knex+sqlite3+angular webapp",
+  "description": "sample dockerizable nodejs+knex+sqlite3+angular webapp",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "~4.13.3",
     "knex": "~0.8.6",
-    "body-parser": "~1.13.3"
+    "body-parser": "~1.13.3",
+    "sqlite3": "latest"
   }
 }
