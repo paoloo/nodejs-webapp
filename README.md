@@ -31,7 +31,7 @@ A `bower init` later help to organize the mess... Or not.
 on application home. Then go http://localhost:3000/
 
 ## Containerization
-I wrote a [Dockerfile](Dockerfile) to build a **docker** image of this project. The base image is `node:argon` and the whole project is build inside the image. To speed the build process up, build it outside and just copy dependencies and everything would help, but this is just a concept. Also, sqlite3 database file is created inside, making it ephemeral.
+I wrote a [Dockerfile](Dockerfile) to build a **docker** image of this project. The base image is `node:argon` and the whole project is built inside the image. To speed the build process up, build it outside and just copy dependencies and everything would help, but this is just a concept. Also, sqlite3 database file is created inside, making it ephemeral.
 - To build:
 ```docker build -t "paoloo/wallapp" .```
 - To run:
