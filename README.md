@@ -38,6 +38,7 @@ I wrote a [Dockerfile](Dockerfile) to build a **docker** image of this project. 
 ```docker run "paoloo/wallapp"```
 - To test, go **http://ip-address:3000** where the **IP-address** is obtained with:
 ```docker inspect `docker ps | grep wallapp | cut -d' ' -f1` | grep "IPAddress" | cut -d':' -f2 | cut -d',' -f1```
+where **wallapp** is the name of the application.
 
 ## License
 **MIT**
