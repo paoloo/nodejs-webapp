@@ -12,5 +12,7 @@ RUN npm install bower -g -s
 RUN cd /usr/src/app/public && bower install angular
 
 EXPOSE 3000
+CMD [ "knex", "migrate:latest" ]
+CMD [ "knex", "seed:run" ]
 CMD [ "npm", "start" ]
 
