@@ -1,0 +1,15 @@
+<html data-ng-app="wallapp">
+<head>
+    <title>Wall App</title>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body data-ng-controller="WallApp">
+<h1>Login</h1>
+<fieldset class="row-fluid">
+    <input type="text" placeholder="Login" data-ng-model="account.login"/><br/>
+    <input type="password" placeholder="Password" data-ng-model="account.pass"/><br/>
+    <button data-ng-click="logar()">Send</button>
+</fieldset>
+</body>
+</html>
