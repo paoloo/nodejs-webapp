@@ -10,12 +10,17 @@
       <legend>New Message</legend>
       <input type="text" placeholder="Message Title" data-ng-model="novamsg.titulomensagem"/><br/>
       <textarea data-ng-model="novamsg.corpomensagem"></textarea><br/>
+      <fieldset class="row-fluid">
+        <legend>User</legend>
+        <input type="text" placeholder="User" data-ng-model="novamsgaccount.login"/><br/>
+        <input type="password" placeholder="Password" data-ng-model="novamsgaccount.pass"/><br/>
+      </fieldset>
       <button data-ng-click="sendmsg()">Send</button>
     </fieldset>
     <fieldset>
         <legend>Messages</legend>
         <div data-ng-repeat="msg in mensagens">
-          <h2>{{msg.titulomensagem}}</h2>
+          <h2>[{{msg.username}}] {{msg.titulomensagem}}</h2>
           <p>{{msg.corpomensagem}}</p>
         </div>
     </fieldset>

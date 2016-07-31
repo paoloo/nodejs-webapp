@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 // rotas
 app.use("/mensagens", require('./routes/mensagens')(knex));
 app.use("/contagens", require('./routes/contagens')(knex));
+app.use("/account", require('./routes/account')(knex));
 
 app.use(express.static("public"));
 

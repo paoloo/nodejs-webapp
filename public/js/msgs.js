@@ -4,7 +4,11 @@ angular.module("wallapp").controller("WallApp",function($scope,$http){
   $scope.initwall=function(){
     $scope.novamsg={
       titulomensagem:"",
-      corpomensagem:""
+      corpomensagem:"",
+    };
+    $scope.novamsgaccount={
+      login:"",
+      pass:""
     };
     $http({
       method : "GET",
@@ -21,15 +25,29 @@ angular.module("wallapp").controller("WallApp",function($scope,$http){
 
   $scope.sendmsg=function(){
     $http({
-      method : "POST",
-      url : "mensagens",
-      headers : {
-        "Content-Type" : "application/json"
-      },
-      data:JSON.stringify($scope.novamsg)
-    }).then(function(res){
-      alert(res.data);
-      $scope.initwall();
-    });
+        method : "POST",
+        url : "account/checklogin",
+        headers : {
+          "Content-Type" : "application/json"
+        },
+        data:JSON.stringify($scope.novamsgaccount)
+      }).then(function(res){
+        var novamsg = $scope.novamsg;
+        novamsg['username'] = res['data'];
+
+        $http({
+          method : "POST",
+          url : "mensagens",
+          headers : {
+            "Content-Type" : "application/json"
+          },
+          data:JSON.stringify(novamsg)
+        }).then(function(res){
+          alert(res.data);
+          $scope.initwall();
+        });
+      }, function(res) {
+        alert('Falha! ' + res['data']);
+      })
   };
 });
