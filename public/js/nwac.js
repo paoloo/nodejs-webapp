@@ -7,6 +7,10 @@ angular.module("wallapp").controller("WallApp",function($scope,$http){
       pass: "",
       fullname: ""
     };
+    $scope.formChangePass={
+      passOld: "",
+      passNew: ""
+    };
     $http({
       method : "GET",
       url : "mensagens",
@@ -28,6 +32,20 @@ angular.module("wallapp").controller("WallApp",function($scope,$http){
         "Content-Type" : "application/json"
       },
       data:JSON.stringify($scope.account)
+    }).then(function(res){
+      alert(res.data);
+      $scope.initwall();
+    });
+  };
+
+  $scope.changePass=function(){
+    $http({
+      method : "POST",
+      url : "account/changepass",
+      headers : {
+        "Content-Type" : "application/json"
+      },
+      data:JSON.stringify($scope.formChangePass)
     }).then(function(res){
       alert(res.data);
       $scope.initwall();
