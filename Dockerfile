@@ -9,6 +9,7 @@ COPY . /usr/src/app
 
 RUN echo '{ "allow_root": true }' > /root/.bowerrc
 RUN npm install bower -g -s
+RUN npm install knex -g -s
 RUN cd /usr/src/app/public && bower install angular
 
 EXPOSE 3000

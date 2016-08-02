@@ -5,13 +5,19 @@
     <script type="text/javascript" src="js/nwac.js"></script>
 </head>
 <body data-ng-controller="WallApp">
-<h1>Create your account</h1>
+<h1>Gerenciamento de contas</h1>
 <fieldset class="row-fluid">
     <legend>New account</legend>
     <input type="text" placeholder="Login" data-ng-model="account.login"/><br/>
     <input type="password" placeholder="Password" data-ng-model="account.pass"/><br/>
     <input type="text" placeholder="Full name" data-ng-model="account.fullname"/><br/>
     <button data-ng-click="newacc()">Send</button>
+</fieldset>
+<fieldset class="row-fluid">
+    <legend>Alterar a sua senha</legend>
+    <input type="password" placeholder="Senha antiga" data-ng-model="formChangePass.passOld"/><br/>
+    <input type="password" placeholder="Nova senha" data-ng-model="formChangePass.passNew"/><br/>
+    <button data-ng-click="changePass()">Send</button>
 </fieldset>
 </body>
 </html>

@@ -21,7 +21,7 @@ app.use("/account", require('./routes/account')(knex));
 
 app.all('*', function(req, res, next) {
     if (['/login.html', '/js/login.js', '/bower_components/angular/angular.min.js', '/favicon.ico'].indexOf(req.originalUrl) != -1 ||
-        req.session.login == 'ok') {
+        req.session.loginToken == 'ok') {
 
         next();
     } else {

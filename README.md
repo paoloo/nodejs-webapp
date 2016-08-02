@@ -15,6 +15,7 @@ Install the basics, *as root*, with your package manager:
 ```
 apt-get install nodejs npm
 npm install bower -g -s
+npm install knex -g -s
 ```
 
 Then, install everything with **npm**:
